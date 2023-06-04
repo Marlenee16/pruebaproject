@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFragment">
+
+
+    <TextView
+        android:id="@+id/tvwelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:text="@string/textv_welcome"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:background="@color/colorbackgroundprimary"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imglogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvwelcome" />
+
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_login_elements"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/raleway"
+        android:gravity="start"
+        android:text="@string/username"
+        android:textSize="@dimen/tv_login_size"
+        app:layout_constraintEnd_toEndOf="@id/imglogo"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="@id/imglogo"
+        app:layout_constraintTop_toBottomOf="@id/imglogo" />
+
+    <EditText
+        android:id="@+id/input_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/username"
+        android:background="@drawable/et_custom"
+        android:textSize="@dimen/et_login_size"
+        android:fontFamily="@font/raleway"
+        android:inputType="textPersonName"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="@dimen/margin_login_elements"
+        android:layout_marginTop="@dimen/margin_top_login_elements"
+        android:paddingLeft="@dimen/margin_login_elements"
+        app:layout_constraintEnd_toEndOf="@id/tv_username"
+        app:layout_constraintStart_toStartOf="@id/tv_username"
+        app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/raleway"
+        android:gravity="start"
+        android:text="@string/password_text"
+        android:textSize="@dimen/tv_login_size"
+        app:layout_constraintEnd_toEndOf="@id/input_username"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="@id/input_username"
+        app:layout_constraintTop_toBottomOf="@id/input_username" />
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/password_text"
+        android:background="@drawable/et_custom"
+        android:textSize="@dimen/et_login_size"
+        android:fontFamily="@font/raleway"
+        android:inputType="textPassword"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="@dimen/margin_login_elements"
+        android:layout_marginTop="@dimen/margin_top_login_elements"
+        android:paddingLeft="@dimen/margin_login_elements"
+        app:layout_constraintEnd_toEndOf="@id/tv_password"
+        app:layout_constraintStart_toStartOf="@id/tv_password"
+        app:layout_constraintTop_toBottomOf="@id/tv_password" />
+
+
+    <Button
+        android:id="@+id/btn_iniciar_sesion"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text= "Iniciar sesión"
+        android:layout_marginTop="@dimen/margin_top_login_elements"
+        android:layout_marginLeft="@dimen/margin_login_elements"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/colorbackgroundprimary"
+        app:layout_constraintEnd_toEndOf="@id/input_password"
+        app:layout_constraintStart_toStartOf="@id/input_password"
+        app:layout_constraintTop_toBottomOf="@id/input_password" />
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Aún no tienes cuenta? Registrate"
+        android:textSize="20sp"
+        android:layout_marginLeft="125dp"
+        app:layout_constraintHorizontal_bias="0.235"
+        android:layout_marginTop="@dimen/margin_top_login_elements"
+        android:fontFamily="@font/raleway"
+        app:layout_constraintEnd_toEndOf="@id/btn_iniciar_sesion"
+        app:layout_constraintStart_toStartOf="@id/btn_iniciar_sesion"
+        app:layout_constraintTop_toBottomOf="@id/btn_iniciar_sesion" />
+
+
+    <Button
+        android:id="@+id/btn_go_to_register"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/margin_top_login_elements"
+        android:layout_marginLeft="@dimen/margin_login_elements"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/gris"
+        android:text="Registrate"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/tv_question"
+        app:layout_constraintStart_toStartOf="@id/tv_question"
+        app:layout_constraintTop_toBottomOf="@id/tv_question" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorbackgroundprimary"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:text="¡Vender nunca fue tan fácil para estudiantes!"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/btn_go_to_register"
+        app:layout_constraintStart_toStartOf="@id/btn_go_to_register"
+        app:layout_constraintTop_toBottomOf="@id/btn_go_to_register" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
